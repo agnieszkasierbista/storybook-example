@@ -1,7 +1,9 @@
 import React from "react";
+import {StyledButton} from "./Button.styled";
+import {ButtonProps} from "./Button.types";
 
-export function Button() {
+export function Button({buttonText, size, label} : ButtonProps ){
     return (
-        <button>Click!</button>
+        <StyledButton onClick={() => console.log('clicked')}>{buttonText}</StyledButton>
     )
 }
