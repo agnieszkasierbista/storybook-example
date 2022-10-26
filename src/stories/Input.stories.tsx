@@ -1,6 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Button } from '../components/Button/Button.layout';
+import {ComponentMeta, ComponentStory} from '@storybook/react';
 import {Input} from "../components/Input/Input.layout";
 
 
@@ -14,14 +13,25 @@ export default {
                 category: 'Colors',
             },
         },
+        borderColor: {
+            control: 'color',
+            table: {
+                category: 'Colors',
+            },
+        },
         radius: {
             control: {type: 'range', min: 1, max: 25},
             table: {category: 'Shape&Size',},
         },
         inputSize: {
-            control: { type: 'radio'},
+            control: {type: 'radio'},
             table: {category: 'Shape&Size',},
-        }
+
+        },
+        inputPlaceholder: {
+            control: {type: 'text'},
+            table: {category: 'Options',},
+        },
     },
 } as ComponentMeta<typeof Input>;
 
@@ -39,7 +49,8 @@ Secondary.args = {
 
 export const Large = Template.bind({});
 Large.args = {
-    inputSize: "large"
+    inputSize: "large",
+    inputPlaceholder: "This is a very very very long placeholder for a rather long input field..."
 };
 
 export const Small = Template.bind({});

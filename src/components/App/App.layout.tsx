@@ -12,8 +12,9 @@ function App() {
                 onLogout={() => console.log("out")}
                 user={{name: "Agnieszka"}}
                 backgroundColor="#fdedf5"
+
             />
-            <Input inputSize="large"/>
+            <Input inputSize="large" inputPlaceholder="Type your text here..."/>
             <Button size='medium' label='Click!' onClick={() => console.log("Click!")}/>
         </div>
     );
