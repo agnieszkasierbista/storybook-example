@@ -1,5 +1,8 @@
 export interface ButtonProps {
-    buttonText: string,
-    size: string,
-    label: string
+    primary?: boolean;
+    backgroundColor?: string;
+    size?: 'small' | 'medium' | 'large';
+    label: string;
+    onClick?: () => void;
+    radius?: number;
 }

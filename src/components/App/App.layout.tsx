@@ -6,9 +6,15 @@ import {Input} from "../Input/Input.layout";
 function App() {
     return (
         <div>
-            <Header/>
-            <Button size='small' label='Button' buttonText='Click!'/>
-            <Input/>
+            <Header
+                onCreateAccount={() => console.log("a")}
+                onLogin={() => console.log("in")}
+                onLogout={() => console.log("out")}
+                user={{name: "Agnieszka"}}
+                backgroundColor="#fdedf5"
+            />
+            <Input inputSize="large"/>
+            <Button size='medium' label='Click!' onClick={() => console.log("Click!")}/>
         </div>
     );
 }
